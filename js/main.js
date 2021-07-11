@@ -13,6 +13,7 @@ dropdwon.forEach((ele) => {
             header.classList.remove("active");
         });
         e.currentTarget.classList.add("active");
+        theLinks.classList.add("cl");
 
         const actEle = document.querySelector(
             ".dropdwon-box" + e.currentTarget.dataset.cont
@@ -23,23 +24,11 @@ dropdwon.forEach((ele) => {
 });
 window.onscroll = () => {
     if (window.scrollY >= 400) {
-        header.style.backgroundColor = "hsl(211deg 61% 8%)";
+        header.classList.add("active");
     } else {
-        header.style.backgroundColor = "transparent";
+        header.classList.remove("active");
     }
 };
-document.body.addEventListener("click", () => {
-    {
-        dropdwon.forEach((drop) => {
-            drop.classList.remove("active");
-        });
-        dropdwonBox.forEach((drop) => {
-            drop.classList.remove("active");
-            header.classList.remove("active");
-        });
-    }
-});
-// End Activation Dropdown In Header
 
 // Switch Products In Products Dropdown
 const tabs = document.querySelectorAll(".list .item"),
@@ -125,4 +114,33 @@ if (screenX < 880) {
 const closerMobileMenu = document.querySelector(".links.mobile .closer"),
     openerMobileMenu = document.querySelector(".mobile-menu i");
 openerMobileMenu.onclick = (_) => theLinks.classList.add("active");
-closerMobileMenu.onclick = (_) => theLinks.classList.remove("active");
+closerMobileMenu.onclick = (_) => {
+    theLinks.classList.remove("active");
+    theLinks.classList.remove("cl");
+    dropdwon.forEach((drop) => {
+        drop.classList.remove("active");
+    });
+    dropdwonBox.forEach((drop) => {
+        drop.classList.remove("active");
+    });
+};
+
+// End Open and Close Mobile Links Menu
+
+// Open and Close Search Box
+
+const searchOpener = document.querySelector(".right-actions .search"),
+    searchBoxCloser = document.querySelector(".search-box .closer"),
+    searchBox = document.querySelector(".search-box");
+
+searchOpener.onclick = (_) => {
+    searchBox.classList.add("active");
+    header.classList.add("active");
+};
+searchBoxCloser.onclick = (_) => {
+    searchBox.classList.remove("active");
+    header.classList.remove("active");
+    if (window.scrollY >= 400) {
+        header.classList.add("active");
+    }
+};

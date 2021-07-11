@@ -53,7 +53,6 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: #fff;
 }
 
@@ -127,6 +126,7 @@ header .links>ul>li .arrow {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 header .links>ul>li .ar,
@@ -192,6 +192,14 @@ header .links ul li .dropdwon-box.active {
 
 header .links.mobile .closer {
     display: none;
+    z-index: -1;
+    background-color: #fff;
+    top: 90px;
+}
+
+header .links.mobile.cl .closer {
+    display: block;
+    z-index: 20;
 }
 
 header .links ul li .dropdwon-box .content {
@@ -425,10 +433,11 @@ header .links ul li.support .dropdwon-box .content p a:hover {
         position: absolute;
         top: 10px;
         right: 10px;
-        color: #fff;
+        color: #000;
         font-size: 25px;
         cursor: pointer;
         display: block;
+        z-index: 20;
     }
     header .links.mobile {
         display: none;
@@ -604,6 +613,95 @@ header .links ul li.support .dropdwon-box .content p a:hover {
     font-size: 17px;
 }
 
+header .search-box {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    background-color: var(--color-primery-dark);
+    padding: 30px 0;
+    display: none;
+}
+
+header .search-box.active {
+    display: block;
+}
+
+header .search-box .closer {
+    color: #fff;
+    font-size: 22px;
+}
+
+header .search-box form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header .search-box form .box {
+    position: relative;
+    width: 50%;
+}
+
+header .search-box form input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 18px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+}
+
+header .search-box form button[type="submit"] {
+    position: absolute;
+    top: 49.8%;
+    left: 2px;
+    border: none;
+    color: #fff;
+    height: 41px;
+    cursor: pointer;
+    border-radius: 3px 0 0 3px;
+    width: 28px;
+    background-color: var(--color-primery-dark);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+}
+
+header .search-box .queck-links {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+header .search-box .queck-links ul {
+    list-style: none;
+}
+
+header .search-box .queck-links ul .title {
+    font-size: 25px;
+    color: #fff;
+}
+
+header .search-box .queck-links ul li {
+    margin: 3px;
+    font-size: 18px;
+}
+
 @media(max-width: 880px) {
     .right-actions .mobile-menu {
         display: block;
@@ -716,7 +814,8 @@ header .the-cart .submit .base-btn a {
     margin-right: 10px;
 }
 
-header .the-cart .closer {
+header .closer {
+    display: block;
     position: absolute;
     top: 20px;
     right: 20px;
