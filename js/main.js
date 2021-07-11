@@ -23,7 +23,7 @@ dropdwon.forEach((ele) => {
     });
 });
 window.onscroll = () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 200) {
         header.classList.add("active");
     } else {
         header.classList.remove("active");
@@ -144,3 +144,26 @@ searchBoxCloser.onclick = (_) => {
         header.classList.add("active");
     }
 };
+
+// End Open and Close Search Box
+
+// Switch Tabs In Featured Products
+const featTabs = document.querySelectorAll(".feat-products .tabs .tab"),
+    featProducts = document.querySelectorAll(".feat-products .products");
+featTabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+        featTabs.forEach((tabIn) => {
+            tabIn.classList.remove("active");
+        });
+        e.currentTarget.classList.add("active");
+        let activeProduct = document.querySelector(
+            ".products" + e.currentTarget.dataset.feat
+        );
+        featProducts.forEach((fPro) => {
+            fPro.classList.remove("active");
+        });
+        activeProduct.classList.add("active");
+    });
+});
+
+// EndSwitch Tabs In Featured Products

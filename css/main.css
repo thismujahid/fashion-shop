@@ -936,3 +936,161 @@ header .the-cart .closer:hover {
 
 
 /* #endregion End Land-area */
+
+
+/* #region Start Featured Products  */
+
+.feat-products {
+    padding: 110px 10px;
+}
+
+.feat-products>h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.feat-products .tabs {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feat-products .tabs .tab {
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.feat-products .tabs .tab.active {
+    border-color: #000;
+}
+
+.feat-products .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.feat-products .products .product {
+    height: 421px;
+    position: relative;
+}
+
+.feat-products .products .product>a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.feat-products .products .product>a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+
+.feat-products .products.best,
+.feat-products .products.new,
+.feat-products .products.random {
+    display: none;
+}
+
+.feat-products .products.best.active,
+.feat-products .products.new.active,
+.feat-products .products.random.active {
+    display: grid;
+}
+
+.feat-products .products .product>a img:last-child {
+    z-index: 2;
+}
+
+.feat-products .products .product>a img:last-child:hover {
+    opacity: 0;
+}
+
+.feat-products .products .product .feat {
+    position: absolute;
+    z-index: 3;
+    background-color: var(--color-primery-dark);
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 20px;
+    top: 10px;
+    right: 10px;
+}
+
+.feat-products .products .product .feat.red {
+    background-color: red;
+}
+
+.feat-products .products .product .box {
+    position: relative;
+}
+
+.feat-products .products .product .name,
+.feat-products .products .product .price {
+    text-align: center;
+    font-size: 30px;
+}
+
+.feat-products .products .product .price {
+    font-size: 23px;
+}
+
+@media(max-width: 1077px) {
+    .feat-products .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .feat-products .products .product {
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width: 737px) {
+    .feat-products .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feat-products .products .product {
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width: 370px) {
+    .feat-products .products .product .box {
+        position: absolute;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        width: 100%;
+    }
+}
+
+@media(max-width: 327px) {
+    .feat-products .products .product .box {
+        bottom: 38px;
+    }
+}
+
+
+/* #endregion End Featured Products  */
