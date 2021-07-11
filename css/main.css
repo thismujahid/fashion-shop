@@ -75,6 +75,7 @@ header {
     -moz-transition: .3s linear;
     -ms-transition: .3s linear;
     -o-transition: .3s linear;
+    z-index: 1000;
 }
 
 header.active {
@@ -187,6 +188,10 @@ header .links ul li .dropdwon-box.active {
     height: auto;
     opacity: 1;
     text-align: center;
+}
+
+header .links.mobile .closer {
+    display: none;
 }
 
 header .links ul li .dropdwon-box .content {
@@ -416,8 +421,105 @@ header .links ul li.support .dropdwon-box .content p a:hover {
 }
 
 @media(max-width:880px) {
+    header .links.mobile .closer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        display: block;
+    }
     header .links.mobile {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-primery-dark);
+        z-index: 100;
+        overflow: auto;
+    }
+    header .links.mobile.active {
+        display: block;
+    }
+    header .links.mobile ul li {
+        display: block;
+        height: auto;
+        width: 90%;
+    }
+    header .links ul li .dropdwon-box {
+        position: relative;
+        cursor: default;
+        width: 100%;
+        top: 0px;
+        height: 0;
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        -ms-transition: .3s linear;
+        -o-transition: .3s linear;
+        opacity: 0;
+    }
+    header .links ul li .dropdwon-box .content .item img {
+        width: 100%;
+        height: auto;
+    }
+    header .links ul li .dropdwon-box.active {
+        height: auto;
+        opacity: 1;
+        text-align: left;
+    }
+    header .links ul li .dropdwon-box .content {
+        display: block;
+    }
+    header .links ul li .dropdwon-box .content .list {
+        width: 100%;
+        padding: 10px;
+    }
+    header .links ul li .dropdwon-box .content .list .item {
+        display: flex;
+        border-radius: 3px;
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        -ms-transition: .3s linear;
+        -o-transition: .3s linear;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+    }
+    header .links ul li.gallery .dropdwon-box .content {
+        padding-top: 10px;
+    }
+    header .links ul li:hover,
+    header .links ul li {
+        border: none;
+    }
+    header .links ul li.pages .dropdwon-box .content .item {
+        padding-top: 10px !important;
+        width: 100%;
+    }
+    header .links ul li.support .dropdwon-box .content {
+        padding-top: 10px;
+    }
+    header .links ul li:hover,
+    header .links ul li.active {
+        border-bottom: none;
+        background-color: transparent;
+    }
+    header .links ul li .dropdwon-box {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    header .links ul li .dropdwon-box .content .item-products {
+        width: 100%;
+        padding: 10px;
     }
     header .right-actions .mobile {
         display: none;
@@ -429,6 +531,13 @@ header .links ul li.support .dropdwon-box .content p a:hover {
     }
     header .right-actions.mobile i {
         font-size: 20px;
+    }
+}
+
+@media(max-width:600px) {
+    header .links ul li.support .dropdwon-box .content p a {
+        font-size: 24px;
+        margin: 14px auto;
     }
 }
 

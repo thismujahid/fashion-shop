@@ -120,3 +120,9 @@ if (screenX < 880) {
 }
 
 // end Get Width Of Window and Edit the Header Links
+
+// open and close mobile Links Menu
+const closerMobileMenu = document.querySelector(".links.mobile .closer"),
+    openerMobileMenu = document.querySelector(".mobile-menu i");
+openerMobileMenu.onclick = (_) => theLinks.classList.add("active");
+closerMobileMenu.onclick = (_) => theLinks.classList.remove("active");
