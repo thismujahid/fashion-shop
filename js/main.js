@@ -101,3 +101,22 @@ proCount = document.getElementById("count");
 proCount.textContent = cartProducts.length;
 
 //End Open and Close The Cart
+
+// Get Width Of Window and Edit the Header Links
+const theLinks = document.querySelector("header .links");
+if (screenX < 880) {
+    theLinks.classList.add("mobile");
+    document
+        .querySelector("header .right-actions .profile")
+        .classList.add("mobile");
+} else if (screenX < 500) {
+    document.querySelector("header .the-cart").classList.add("mobile");
+} else {
+    theLinks.classList.remove("mobile");
+    document
+        .querySelector("header .right-actions .profile")
+        .classList.add("mobile");
+    document.querySelector("header .the-cart").classList.add("mobile");
+}
+
+// end Get Width Of Window and Edit the Header Links
