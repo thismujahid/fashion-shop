@@ -646,6 +646,18 @@ header .search-box form .box {
     width: 50%;
 }
 
+@media(max-width: 650px) {
+    header .search-box form .box {
+        width: 80%;
+    }
+}
+
+@media(max-width: 400px) {
+    header .search-box form .box {
+        width: 100%;
+    }
+}
+
 header .search-box form input[type="text"] {
     width: 100%;
     padding: 10px 10px 10px 30px;
