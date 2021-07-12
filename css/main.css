@@ -1127,14 +1127,45 @@ footer .rights {
     padding: 20px 0;
 }
 
-footer .rights .right,
-footer .rights .social {
-    width: 50%;
+footer .rights .right {
+    width: 80%;
     font-size: 20px;
 }
 
 footer .rights .social {
     direction: rtl;
+    width: 20%;
+    font-size: 20px;
+}
+
+@media(max-width:960px) {
+    footer .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer .content .item {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:590px) {
+    footer .content .rights {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media(max-width:550px) {
+    footer .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:350px) {
+    footer .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
