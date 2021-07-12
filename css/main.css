@@ -968,6 +968,15 @@ header .the-cart .closer:hover {
     cursor: pointer;
 }
 
+@media(max-width: 550px) {
+    .feat-products>h2 {
+        font-size: 30px;
+    }
+    .feat-products .tabs .tab {
+        font-size: 11px;
+    }
+}
+
 .feat-products .tabs .tab.active {
     border-color: #000;
 }
