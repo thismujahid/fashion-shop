@@ -167,3 +167,28 @@ featTabs.forEach((tab) => {
 });
 
 // EndSwitch Tabs In Featured Products
+
+// add Offers Timer
+var countDownDate = new Date("Jul 20, 2022 1:25:14").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.querySelector(".timer").innerHTML = `<span >${days}<b>D</b></span>
+            <span>${hours}<b>H</b></span>
+            <span>${minutes}<b>M</b></span>
+            <span>${seconds}<b>S</b></span>`;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
+var day = new Date().getDate();
+var mon = new Date().getMonth() + 1;
+var fYear = new Date().getFullYear();
+//End add Offers Timer
