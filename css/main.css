@@ -17,7 +17,6 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    height: 2000px;
     overflow-x: hidden;
 }
 
@@ -1094,3 +1093,49 @@ header .the-cart .closer:hover {
 
 
 /* #endregion End Featured Products  */
+
+
+/* #region Footer */
+
+footer {
+    background-color: #F2F2F3;
+    padding: 50px 10px;
+}
+
+footer .content {
+    display: flex;
+    border-bottom: .5px solid #6c727a5b;
+    padding-bottom: 10px;
+}
+
+footer .content .item {
+    width: 100%;
+    list-style: none;
+}
+
+footer .content .item li:first-of-type {
+    font-size: 25px;
+}
+
+footer a {
+    color: #6C727A;
+    text-decoration: none;
+}
+
+footer .rights {
+    display: flex;
+    padding: 20px 0;
+}
+
+footer .rights .right,
+footer .rights .social {
+    width: 50%;
+    font-size: 20px;
+}
+
+footer .rights .social {
+    direction: rtl;
+}
+
+
+/* #endregion Footer */
