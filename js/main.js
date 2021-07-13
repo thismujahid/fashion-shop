@@ -189,33 +189,32 @@ var shdowElementScrollPosition = shdowElement.offsetTop;
 window.onscroll = () => {
     if (window.scrollY >= shdowElementScrollPosition) {
         shdowElement.style.setProperty("--afterOpacity", "1");
+        console.log("0");
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 400)
     ) {
-        shdowElement.style.setProperty("--afterOpacity", "0.7");
+        shdowElement.style.setProperty("--afterOpacity", "0.9");
+        console.log("-400");
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 300)
     ) {
-        shdowElement.style.setProperty("--afterOpacity", "0.7");
+        console.log("-300");
+        shdowElement.style.setProperty("--afterOpacity", "0.6");
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 200)
     ) {
-        shdowElement.style.setProperty("--afterOpacity", "0.5");
+        console.log("-200");
+
+        shdowElement.style.setProperty("--afterOpacity", "0.3");
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 100)
     ) {
-        shdowElement.style.setProperty("--afterOpacity", "0.2");
-        header.style.top = "-70px";
-    } else if (
-        window.scrollY >=
-        shdowElementScrollPosition -
-        (parseInt(shdowElementAfter) - parseInt(shdowElementAfter))
-    ) {
-        shdowElement.style.setProperty("--afterOpacity", "0.2");
+        shdowElement.style.setProperty("--afterOpacity", "0.1");
+        console.log("-100");
         header.style.top = "-70px";
     } else {
         shdowElement.style.setProperty("--afterOpacity", 0);
