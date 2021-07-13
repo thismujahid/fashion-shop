@@ -1,3 +1,4 @@
+//#region of Header
 // Active DropDwons In Header
 const dropdwonBox = document.querySelectorAll(".dropdwon-box"),
     dropdwon = document.querySelectorAll("li.dropdwon"),
@@ -146,7 +147,8 @@ searchBoxCloser.onclick = (_) => {
 };
 
 // End Open and Close Search Box
-
+//#endregion Of Header
+//#region Of Land Area
 // Switch Tabs In Featured Products
 const featTabs = document.querySelectorAll(".feat-products .tabs .tab"),
     featProducts = document.querySelectorAll(".feat-products .products");
@@ -167,7 +169,44 @@ featTabs.forEach((tab) => {
 });
 
 // EndSwitch Tabs In Featured Products
-
+//#endregion Of Land Area
+//#region offers section Functionality
+// add and remove opacity
+const shdowElement = document.querySelector(".offers");
+shdowElement.style.setProperty("--afterOpacity", 1);
+const shdowElementAfter = window.getComputedStyle(
+    shdowElement,
+    ":before"
+).height;
+var shdowElementScrollPosition = shdowElement.offsetTop;
+window.onscroll = () => {
+    if (
+        window.scrollY >=
+        shdowElementScrollPosition - (parseInt(shdowElementAfter) - 400)
+    ) {
+        console.log(parseInt(shdowElementAfter) - 300);
+        shdowElement.style.setProperty("--afterOpacity", "0.7");
+        shdowElement.style.setProperty("--afterOpacity", "0.8");
+        shdowElement.style.setProperty("--afterOpacity", "0.9");
+        shdowElement.style.setProperty("--afterOpacity", "1");
+        header.style.top = "-70px";
+    } else if (
+        window.scrollY >=
+        shdowElementScrollPosition - (parseInt(shdowElementAfter) - 200)
+    ) {
+        console.log(parseInt(shdowElementAfter) - 150);
+        shdowElement.style.setProperty("--afterOpacity", "0.1");
+        shdowElement.style.setProperty("--afterOpacity", "0.2");
+        shdowElement.style.setProperty("--afterOpacity", "0.3");
+        shdowElement.style.setProperty("--afterOpacity", "0.4");
+        shdowElement.style.setProperty("--afterOpacity", "0.5");
+        shdowElement.style.setProperty("--afterOpacity", "0.6");
+    } else {
+        shdowElement.style.setProperty("--afterOpacity", 0);
+        header.style.top = "0px";
+    }
+};
+// End add and remove opacity
 // add Offers Timer
 var countDownDate = new Date("Aug 12, 2021 7:05:14").getTime();
 
@@ -191,3 +230,4 @@ var day = new Date().getDate();
 var mon = new Date().getMonth() + 1;
 var fYear = new Date().getFullYear();
 //End add Offers Timer
+//#endregion offers section Functionality

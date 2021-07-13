@@ -74,6 +74,7 @@ header {
     -ms-transition: .3s linear;
     -o-transition: .3s linear;
     z-index: 1000;
+    background-color: var(--color-primery-dark);
 }
 
 header.active {
@@ -1089,6 +1090,24 @@ header .the-cart .closer:hover {
 .offers {
     position: relative;
     background-color: #A8B3AB;
+}
+
+.offers:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primery-dark);
+    opacity: var(--afterOpacity, 0);
+    transition: .3s linear;
+    pointer-events: none;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
 }
 
 .offers .content {
