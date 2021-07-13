@@ -216,6 +216,14 @@ window.onscroll = () => {
         shdowElement.style.setProperty("--afterOpacity", 0);
     }
 };
+window.addEventListener("scroll", () => {
+    if (
+        window.scrollY <=
+        shdowElementScrollPosition - (parseInt(shdowElementAfter) - 300)
+    ) {
+        header.style.top = "0px";
+    }
+});
 // End add and remove opacity
 // add Offers Timer
 var countDownDate = new Date("Aug 12, 2021 7:05:14").getTime();
@@ -241,3 +249,25 @@ var mon = new Date().getMonth() + 1;
 var fYear = new Date().getFullYear();
 //End add Offers Timer
 //#endregion offers section Functionality
+
+//#region categorys
+const colorChanger = document.querySelectorAll(".color-changer span"),
+    actImage = document.querySelector(".act-image"),
+    colorNamee = document.querySelector(".color-name span");
+
+colorChanger.forEach((span) => {
+    span.addEventListener("click", (e) => {
+        colorChanger.forEach((spanN) => {
+            spanN.classList.remove("active");
+        });
+        e.currentTarget.classList.add("active");
+        if (e.currentTarget.classList.contains("y")) {
+            colorNamee.textContent = "Yellow";
+        } else {
+            colorNamee.textContent = "Black";
+        }
+        actImage.setAttribute("src", e.currentTarget.dataset.imgsrc);
+    });
+});
+
+//#endregion categorys
