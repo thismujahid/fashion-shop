@@ -3,6 +3,13 @@
 const dropdwonBox = document.querySelectorAll(".dropdwon-box"),
     dropdwon = document.querySelectorAll("li.dropdwon"),
     header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 50) {
+        header.style.top = "-70px";
+    } else {
+        header.style.top = "0px";
+    }
+});
 dropdwon.forEach((ele) => {
     ele.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -180,27 +187,36 @@ const shdowElementAfter = window.getComputedStyle(
 ).height;
 var shdowElementScrollPosition = shdowElement.offsetTop;
 window.onscroll = () => {
-    if (
+    if (window.scrollY >= shdowElementScrollPosition) {
+        shdowElement.style.setProperty("--afterOpacity", "1");
+    } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 400)
     ) {
-        console.log(parseInt(shdowElementAfter) - 300);
         shdowElement.style.setProperty("--afterOpacity", "0.7");
-        shdowElement.style.setProperty("--afterOpacity", "0.8");
-        shdowElement.style.setProperty("--afterOpacity", "0.9");
-        shdowElement.style.setProperty("--afterOpacity", "1");
-        header.style.top = "-70px";
+    } else if (
+        window.scrollY >=
+        shdowElementScrollPosition - (parseInt(shdowElementAfter) - 300)
+    ) {
+        shdowElement.style.setProperty("--afterOpacity", "0.7");
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 200)
     ) {
-        console.log(parseInt(shdowElementAfter) - 150);
-        shdowElement.style.setProperty("--afterOpacity", "0.1");
-        shdowElement.style.setProperty("--afterOpacity", "0.2");
-        shdowElement.style.setProperty("--afterOpacity", "0.3");
-        shdowElement.style.setProperty("--afterOpacity", "0.4");
         shdowElement.style.setProperty("--afterOpacity", "0.5");
-        shdowElement.style.setProperty("--afterOpacity", "0.6");
+    } else if (
+        window.scrollY >=
+        shdowElementScrollPosition - (parseInt(shdowElementAfter) - 100)
+    ) {
+        shdowElement.style.setProperty("--afterOpacity", "0.2");
+        header.style.top = "-70px";
+    } else if (
+        window.scrollY >=
+        shdowElementScrollPosition -
+        (parseInt(shdowElementAfter) - parseInt(shdowElementAfter))
+    ) {
+        shdowElement.style.setProperty("--afterOpacity", "0.2");
+        header.style.top = "-70px";
     } else {
         shdowElement.style.setProperty("--afterOpacity", 0);
         header.style.top = "0px";
