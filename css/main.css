@@ -47,8 +47,9 @@ body {
 }
 
 .container {
-    max-width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 5px;
 }
 
 a {

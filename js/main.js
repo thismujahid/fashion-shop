@@ -185,18 +185,18 @@ window.onscroll = () => {
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 600)
     ) {
         shdowElement.style.setProperty("--afterOpacity", "1");
-        header.style.top = "-70px";
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 400)
     ) {
         shdowElement.style.setProperty("--afterOpacity", "0.9");
-        header.style.top = "0px";
+        header.style.top = "-70px";
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 300)
     ) {
         shdowElement.style.setProperty("--afterOpacity", "0.6");
+        header.style.top = "0px";
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 200)
@@ -205,6 +205,11 @@ window.onscroll = () => {
     } else if (
         window.scrollY >=
         shdowElementScrollPosition - (parseInt(shdowElementAfter) - 100)
+    ) {
+        shdowElement.style.setProperty("--afterOpacity", "0.2");
+    } else if (
+        window.scrollY >=
+        shdowElementScrollPosition - parseInt(shdowElementAfter)
     ) {
         shdowElement.style.setProperty("--afterOpacity", "0.1");
     } else {
