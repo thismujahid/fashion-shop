@@ -169,7 +169,7 @@ featTabs.forEach((tab) => {
 // EndSwitch Tabs In Featured Products
 
 // add Offers Timer
-var countDownDate = new Date("Jul 20, 2022 1:25:14").getTime();
+var countDownDate = new Date("Aug 12, 2021 7:05:14").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
@@ -182,8 +182,7 @@ var x = setInterval(function() {
             <span>${hours}<b>H</b></span>
             <span>${minutes}<b>M</b></span>
             <span>${seconds}<b>S</b></span>`;
-
-    if (distance < 0) {
+    if (distance <= 0) {
         clearInterval(x);
         document.querySelector(".timer").innerHTML = "EXPIRED";
     }

@@ -1151,17 +1151,22 @@ header .the-cart .closer:hover {
 }
 
 .offers .content .shop-timer .timer span {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 10px;
 }
 
 .offers .content .shop-timer .timer span b {
-    font-size: 7px;
+    font-size: 12px;
 }
 
 .offers .content .shop-timer .shop {
     direction: rtl;
     width: 44%;
     padding: 0 10px;
+}
+
+.offers .content .shop-timer .shop a {
+    text-decoration: none;
 }
 
 @media (max-width: 950px) {
