@@ -1172,22 +1172,32 @@ header .the-cart .closer:hover {
         position: relative;
         top: 0%;
     }
+    .offers .content .shop-timer {
+        width: 100%;
+    }
 }
 
 @media (max-width: 510px) {
+    .offers .content {
+        padding: 100px 0;
+    }
+}
+
+@media(max-width: 450px) {
     .offers .content .shop-timer {
         width: 100%;
         position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        display: block;
         height: auto;
+        text-align: center;
     }
     .offers .content .shop-timer .timer,
     .offers .content .shop-timer .shop {
         width: 100%;
-        text-align: center;
+        margin: 0 auto;
+    }
+    .offers .content .shop-timer .timer span {
+        margin: 0 5px;
     }
 }
 
