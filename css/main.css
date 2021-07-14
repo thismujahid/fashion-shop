@@ -589,13 +589,6 @@ header .links ul li.support .dropdwon-box .content p a:hover {
     }
 }
 
-@media(max-width:500px) {
-    header .the-cart.mobile {
-        width: 100%;
-        right: -100%;
-    }
-}
-
 
 /*  Start right-actions */
 
@@ -771,17 +764,38 @@ header .the-cart {
     top: 0;
     right: -400px;
     height: 100vh;
-    transition: .3s linear;
-    -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     overflow: auto;
 }
 
 header .the-cart.active {
     right: 0;
     z-index: 1000;
+}
+
+header .the-cart>.overlay {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    pointer-events: none;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+header .the-cart>.overlay.active {
+    background-color: #131d2ae1;
+    pointer-events: visible;
 }
 
 header .the-cart .title {
@@ -890,6 +904,16 @@ header .closer {
 
 header .the-cart .closer:hover {
     box-shadow: none;
+}
+
+@media(max-width:500px) {
+    header .the-cart.mobile {
+        width: 100%;
+        /* right: -100%; */
+    }
+    header .the-cart .overlay.active {
+        display: none;
+    }
 }
 
 

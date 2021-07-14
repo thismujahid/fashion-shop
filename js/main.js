@@ -53,13 +53,20 @@ tabs.forEach((tab) => {
 
 // Open and Close The Cart
 const theCart = document.querySelector(".the-cart"),
+    theCartOverLay = document.querySelector(".the-cart .overlay"),
     cartOpener = document.querySelector(".cart-opener"),
     cartCloser = document.querySelector(".the-cart .closer");
 cartOpener.onclick = () => {
     theCart.classList.add("active");
+    theCartOverLay.classList.add("active");
 };
 cartCloser.onclick = () => {
     theCart.classList.remove("active");
+    theCartOverLay.classList.remove("active");
+};
+theCartOverLay.onclick = () => {
+    theCart.classList.remove("active");
+    theCartOverLay.classList.remove("active");
 };
 // Calculate The Price
 const productsPrice = document.querySelectorAll(".product-price"),
