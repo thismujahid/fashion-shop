@@ -1306,12 +1306,14 @@ header .the-cart .closer:hover {
 .categorys .category .type {
     height: 100%;
     display: grid;
+    background-color: #131D2A;
 }
 
 .categorys .category .type .type-title {
     padding: 20px;
     font-size: 45px;
     margin-top: 0;
+    color: #fff;
 }
 
 .categorys .category .type .type-page {
@@ -1338,7 +1340,7 @@ header .the-cart .closer:hover {
 }
 
 .categorys .category .type .type-page button a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: .2s linear;
     -webkit-transition: .2s linear;
@@ -1358,7 +1360,7 @@ header .the-cart .closer:hover {
     width: 55%;
     height: 8px;
     transition: .2s linear;
-    background-color: #D3D4D7;
+    background-color: #313A45;
     -webkit-transition: .2s linear;
     -moz-transition: .2s linear;
     -ms-transition: .2s linear;
@@ -1577,7 +1579,6 @@ header .the-cart .closer:hover {
     padding: 15px 10px;
     background-color: #f2f2f3;
     text-align: center;
-    box-shadow: 0 0.9px 1.5px rgb(0 0 0 / 3%), 0 3.1px 5.5px rgb(0 0 0 / 8%), 0 14px 25px rgb(0 0 0 / 12%);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1659,6 +1660,244 @@ header .the-cart .closer:hover {
 }
 
 
+/* #endregion Testimonials */
+
+
+/* #region our-story */
+
+.our-story {
+    padding: 100px 0;
+    background-color: #F1BE98;
+}
+
+.our-story .story {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.our-story .story .sction-title {
+    padding: 70px 0;
+    position: relative;
+}
+
+.our-story .story .sction-title h2 {
+    font-size: 40px;
+}
+
+.our-story .story .sction-title p {
+    font-size: 16px;
+}
+
+.our-story .story .sction-title .line {
+    display: block;
+    margin: 40px auto 0px;
+    width: 10px;
+    height: 10px;
+    background-color: #6c727a48;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.our-story .story .sction-title:after,
+.our-story .story .sction-title:before {
+    content: "";
+    position: absolute;
+    bottom: 75px;
+    transform: translateY(-50%);
+    left: 0;
+    width: 48%;
+    height: 1px;
+    background-color: #6c727a48;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.our-story .story .sction-title:after {
+    right: 0;
+    left: unset;
+}
+
+.our-story .the-artical {
+    padding: 10px;
+    position: relative;
+}
+
+.our-story .the-artical .artImg {
+    max-width: 320px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.our-story .the-artical p {
+    line-height: 1.58;
+    font-size: 18px;
+    word-spacing: 2px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.our-story .the-artical p:last-of-type {
+    margin-top: 30px;
+}
+
+.our-story .the-artical .name {
+    width: 150px;
+}
+
+@media (max-width: 850px) {
+    .our-story .story {
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .our-story .the-artical .artImg {
+        max-width: 100%;
+        float: unset;
+        margin: 0;
+    }
+    .our-story .the-artical {
+        padding: 5px;
+    }
+    .our-story .the-artical p {
+        font-size: 15px;
+    }
+}
+
+
+/* #endregion our-story */
+
+
+/* #region Mail */
+
+.mail {
+    padding: 80px 0;
+}
+
+.mail .control {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.mail .control .disc h2 {
+    font-size: 40px;
+}
+
+.mail .control .disc p {
+    font-size: 23px;
+}
+
+.mail .control .form {
+    display: grid;
+    padding: 20px 0;
+}
+
+.mail .control .form form input {
+    width: 68%;
+    padding: 8px 12px;
+    outline: 1px solid rgba(0, 0, 0, 0.315);
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
+}
+
+.mail .control .form form input:focus,
+.mail .control .form form input:focus+button {
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.mail .control .form form button {
+    width: 30%;
+    padding: 9px 12px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: bold;
+    margin-left: -3px;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+    cursor: pointer;
+}
+
+.mail .control .social {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mail .control .social a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.561);
+    background-color: #f2f2f3;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 10px;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
+}
+
+.mail .control .social a:hover {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    color: var(--color-primary);
+}
+
+@media(max-width:950px) {
+    .mail .control {
+        display: block;
+    }
+}
+
+@media(max-width:450px) {
+    .mail .control .form form input {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+    .mail .control .form form button {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* #endregion Mail */
+
+
 /* #region Footer */
 
 footer {
@@ -1682,14 +1921,32 @@ footer .content .item li:first-of-type {
 }
 
 footer a {
-    color: #6C727A;
+    color: #000;
     text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+    transition: .1s linear;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -o-transition: .1s linear;
+    opacity: .6;
+    font-weight: 500;
+}
+
+footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 footer .rights {
     display: block;
     padding: 20px 0;
     text-align: center;
+}
+
+footer .rights i {
+    font-size: 25px;
 }
 
 @media(max-width:960px) {
