@@ -1449,10 +1449,6 @@ header .the-cart .closer:hover {
         grid-template-columns: repeat(1, 1fr);
         padding: 20px 40px;
     }
-    .categorys .category .type {
-        background-color: #F2F2F3;
-        margin: -5px 0 0 0;
-    }
     .categorys .category .type-page {
         height: 80px;
         display: flex;
@@ -1469,10 +1465,6 @@ header .the-cart .closer:hover {
     }
     .categorys .category {
         padding: 0;
-    }
-    .categorys .category .type {
-        background-color: #F2F2F3;
-        margin: -5px 0 0 0;
     }
     .categorys .category .type .type-title {
         font-size: 30px;
