@@ -82,6 +82,39 @@ img {
     color: #6C727A;
 }
 
+#backtotop {
+    position: fixed;
+    right: -100%;
+    cursor: pointer;
+    bottom: 15px;
+    z-index: 3000;
+    font-size: 20px;
+    background-color: #131D2A;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+@media(max-width: 550px) {
+    #backtotop {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
 @media(max-width: 750px) {
     .sction-title h2 {
         font-size: 30px;

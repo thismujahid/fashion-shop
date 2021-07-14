@@ -258,6 +258,7 @@ var fYear = new Date().getFullYear();
 //#endregion offers section Functionality
 
 //#region categorys
+
 const colorChanger = document.querySelectorAll(".color-changer span"),
     actImage = document.querySelector(".act-image"),
     colorNamee = document.querySelector(".color-name span");
@@ -278,3 +279,20 @@ colorChanger.forEach((span) => {
 });
 
 //#endregion categorys
+
+// Back To Top BTN
+const upToTop = document.getElementById("backtotop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 1000) {
+        upToTop.style.right = "15px";
+    } else {
+        upToTop.style.right = "-100%";
+    }
+});
+upToTop.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+};
