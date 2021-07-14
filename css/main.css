@@ -795,7 +795,7 @@ header .the-cart {
     background-color: #fff;
     width: 400px;
     top: 0;
-    right: -400px;
+    right: -600px;
     height: 100vh;
     transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;

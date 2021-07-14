@@ -256,7 +256,6 @@ var mon = new Date().getMonth() + 1;
 var fYear = new Date().getFullYear();
 //End add Offers Timer
 //#endregion offers section Functionality
-
 //#region categorys
 
 const colorChanger = document.querySelectorAll(".color-changer span"),
@@ -279,8 +278,7 @@ colorChanger.forEach((span) => {
 });
 
 //#endregion categorys
-
-// Back To Top BTN
+//#region  Back To Top BTN
 const upToTop = document.getElementById("backtotop");
 
 window.addEventListener("scroll", () => {
@@ -296,3 +294,4 @@ upToTop.onclick = () => {
         behavior: "smooth",
     });
 };
+//#endregion  Back To Top BTN
